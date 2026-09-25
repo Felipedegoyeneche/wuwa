@@ -1,0 +1,367 @@
+:root{
+    --bg: #14100c;
+    --bg-panel: #201810;
+    --bg-panel-alt: #2a1e14;
+    --accent: #f5b83d;
+    --accent-2: #ff7a3d;
+    --error: #ff5c5c;
+    --ok: #7ed08a;
+    --text: #f0e9de;
+    --text-dim: #b3a495;
+    --border: 1px solid rgba(245, 184, 61, 0.35);
+    --radius: 3px;
+} /*(Estos son los colores de los elementos de la página)*/
+
+/*Avance Modelo*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: ui-monospace, "Courier New", monospace;
+    letter-spacing: 0.5px;
+    margin: 0 0 0.5rem 0;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--accent);
+}
+
+/*Avance Header*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-panel);
+    border-bottom: var(--border);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-family: ui-monospace, "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+header nav a.activa {
+    color: var(--accent);
+}
+
+#btn-theme {
+    background: transparent;
+    border: var(--border);
+    color: var(--text);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.beta-badge {
+    display: inline-block;
+    background: var(--accent-2);
+    color: #250c00;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.15rem 0.5rem;
+    margin-left: 0.4rem;
+}
+
+/*Avance Layout*/
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section > h2 {
+    border-left: 4px solid var(--accent);
+    padding-left: 0.6rem;
+}
+
+/*Hero (personaje)*/
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--bg-panel), var(--bg-panel-alt));
+    border: var(--border);
+}
+
+.hero p {
+    color: var(--text-dim);
+    max-width: 48ch;
+}
+
+/*Tarjetas de personajes (index)*/
+.grid-personajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-personaje {
+    background: var(--bg-panel);
+    border: var(--border);
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    transition: border-color 0.15s ease;
+}
+
+.tarjeta-personaje:hover {
+    border-color: var(--accent);
+}
+
+.tarjeta-personaje img {
+    width: 100%;
+    margin-bottom: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.tarjeta-personaje h3 {
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+}
+
+.tarjeta-personaje p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/*Panel reutilizable*/
+.panel {
+    background: var(--bg-panel);
+    border: var(--border);
+    padding: 1.2rem;
+}
+
+.media-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.media-panel img,
+.media-panel video {
+    max-width: 420px;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.media-oculto {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #250c00;
+    padding: 0.65rem 1.2rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: var(--accent-2);
+    color: #fff;
+}
+
+.btn-secundario {
+    background: transparent;
+    border: var(--border);
+    color: var(--text);
+}
+
+/*Tabla de datos*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-panel);
+}
+
+th, td {
+    border: 1px solid rgba(245, 184, 61, 0.25);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+}
+
+th {
+    background: var(--bg-panel-alt);
+    color: var(--accent);
+}
+
+/*Detalles*/
+details {
+    background: var(--bg-panel);
+    border: var(--border);
+    padding: 0.8rem 1rem;
+}
+
+details summary {
+    cursor: pointer;
+    color: var(--accent-2);
+    font-family: ui-monospace, "Courier New", monospace;
+}
+
+/*Avance Formulario (contacto.html)*/
+.form-panel {
+    max-width: 560px;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    background: var(--bg-panel-alt);
+    border: var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+
+/*Estado de error (borde y mensaje se vuelven rojos)*/
+.campo.campo-error input,
+.campo.campo-error select,
+.campo.campo-error textarea {
+    border: 1px solid var(--error);
+}
+
+.mensaje-error {
+    display: block;
+    min-height: 1.1rem;
+    color: var(--error);
+    font-size: 0.82rem;
+    margin-top: 0.3rem;
+}
+
+.mensaje-exito {
+    color: var(--ok);
+    border: 1px solid var(--ok);
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.mensaje-exito.visible {
+    display: block;
+}
+
+/*Avance Footer*/
+footer {
+    background: var(--bg-panel);
+    border-top: var(--border);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+/*Modo oscuro alterno (classList.toggle)*/
+body.dark-mode {
+    background-color: #000000;
+}
+
+body.dark-mode header,
+body.dark-mode .panel,
+body.dark-mode table,
+body.dark-mode details,
+body.dark-mode footer,
+body.dark-mode .tarjeta-personaje {
+    background-color: #050302;
+}
+
+/*Responsividad*/
+@media (max-width: 700px) {
+    hero {
+    grid-template-columns: 1fr;
+    }
+
+    header {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
