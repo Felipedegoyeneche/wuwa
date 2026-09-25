@@ -371,14 +371,14 @@ footer {
 
 /*Modo oscuro alterno (classList.toggle)*/
 body.dark-mode {
-    --bg: #14100c;
-    --bg-panel: #201810;
-    --bg-panel-alt: #2a1e14;
+    --bg: #000000;
+    --bg-panel: #121212;
+    --bg-panel-alt: #1e1e1e;
     --accent-text: #f5b83d;
     --error: #ff5c5c;
     --ok: #7ed08a;
-    --text: #f0e9de;
-    --text-dim: #b3a495;
+    --text: #f2f2f2;
+    --text-dim: #a6a6a6;
     --line: rgba(255, 255, 255, 0.08);
     --border: 1px solid rgba(245, 184, 61, 0.35);
 }
