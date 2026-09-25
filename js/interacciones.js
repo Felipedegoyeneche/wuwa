@@ -1,7 +1,7 @@
 const btntheme = document.getElementById('btn-theme');
 if (btntheme){
   btntheme.oneclick = function(){
-    Document.body.classlist.toggle('dark-mode');
+    document.body.classlist.toggle('dark-mode');
   };
 }
 
