@@ -1,7 +1,7 @@
 const btntheme = document.getElementById('btn-theme');
 if (btntheme){
-  btntheme.oneclick = function(){
-    document.body.classlist.toggle('dark-mode');
+  btntheme.onclick = function(){
+    document.body.classList.toggle('dark-mode');
   };
 }
 
@@ -11,18 +11,19 @@ let mostrandoImagen = true ;
 if (btntogglemedia){
   const imagen = document.getElementById('media-imagen');
   const video = document.getElementById('media-video');
-  btntogglemedia.oneclick = function (){
+  btntogglemedia.onclick = function (){
     if (mostrandoImagen){
-      imagen.classlist.add('media-oculto');
-      video.classlist.remove('media-oculto');
-      btntogglemedia.innerText ='ver video';
+      imagen.classList.add('media-oculto');
+      video.classList.remove('media-oculto');
+      btntogglemedia.innerText = 'Ver imagen';
       mostrandoImagen = false;
-      
+
     }else {
       video.classList.add('media-oculto');
-      video.pause();
-      imagen.classlist.remove('media-oculto');
-      btntogglemedia.innerText = 'ver video';
+      // Reasignar el src detiene el video de YouTube
+      video.src = video.src;
+      imagen.classList.remove('media-oculto');
+      btntogglemedia.innerText = 'Ver video';
       mostrandoImagen =true;
     }
 
@@ -31,7 +32,7 @@ if (btntogglemedia){
 
 const btnafinidad = document.getElementById('btn-afinidad');
 if (btnafinidad){
-  btnafinidad.oneclick = function(){
+  btnafinidad.onclick = function(){
   const contador = document.getElementById('afinidad');
   contador.innerText = parseInt(contador.innerText)+1;
 

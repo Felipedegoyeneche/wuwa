@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito JS</title>
-  <style>
-    body { font-family: Arial, sans-serif; display: flex; gap: 2rem; padding: 20px; }
-    .productos, .carrito { border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 300px; }
-    .producto { border-bottom: 1px solid #eee; padding: 10px 0; }
-    button { cursor: pointer; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
 </head>
 <body>
 
-  <section class="productos">
-    <h2>Productos</h2>
-    <div id="contenedor-productos"></div>
-  </section>
+    <header>
+        <div class="logo">WUWA<span>//</span>Guia</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="chisa.html">Chisa</a></li>
+                <li><a href="camellya.html">Camellya</a></li>
+                <li><a href="carrito.html" class="activa">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="btn-theme">Modo Oscuro</button>
+    </header>
 
-  <section class="carrito">
-    <h2>Tu Carrito</h2>
-    <ul id="lista-carrito"></ul>
-    <p><strong>Total: $<span id="total">0</span></strong></p>
-    <button id="vaciar-carrito">Vaciar Carrito</button>
-  </section>
+    <main>
+        <section>
+            <h2>Tienda</h2>
+            <div class="tienda">
+                <div class="panel">
+                    <h3>Productos</h3>
+                    <div id="contenedor-productos"></div>
+                </div>
 
-  <script src="app.js"></script>
+                <div class="panel">
+                    <h3>Tu carrito</h3>
+                    <ul id="lista-carrito"></ul>
+                    <p><strong>Total: <span id="total">$0</span></strong></p>
+                    <button id="vaciar-carrito" class="btn btn-secundario">Vaciar carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pagina made by TusPadres</p>
+    </footer>
+
+    <script src="../js/interacciones.js"></script>
+    <script src="../js/carrito.js"></script>
 </body>
 </html>
