@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang ="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+<body>
+
+    <header>
+        <div class="logo">WUWA<span>//</span>Guia</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="chisa.html" class="activa">Chisa</a></li>
+                <li><a href="camellya.html">Camellya</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>  
+        <button id="btn-theme">Modo Oscuro</button>
+    </header>  
+
+    <main>
+        <section>
+            <h2>Sugerir personaje(contacto profe)</h2>
+            <p style="color:var(--tex-dim);">
+                ¿Quieres que agreguemos la guia de otro Resonador? Llena el formulario!
+            </p>
+
+            <form id="form-contacto" class="panel form-panel" novalidate>
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                    <span class="mensaje-error" id="error-nombre"></span>
+
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="text" id="correo" name="correo" placeholder="nombre@correo.com">
+                    <span class="mensaje-error" id="error-correo"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="personaje-favorito">¿Sobre qué personaje es tu sugerencia?</label>
+                    <select id="personaje-favorito" name="personaje-favorito">
+                        <option value="">-- Selecciona --</option>
+                        <option value="chixia">Chixia</option>
+                        <option value="otro">Otro Resonador</option>
+                        <option value="no-se">Cualquiera / no tengo preferencia</option>
+                    </select>
+                    <span class="mensaje-error" id="error-personaje"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu idea (10 a 300 caracteres)"></textarea>
+                    <span class="mensaje-error" id="error-mensaje"></span>
+                </div>
+
+                <button type="submit" class="btn">Enviar sugerencia</button>
+
+                <p class="mensaje-exito" id="mensaje-exito">
+                    ¡Listo! Tu sugerencia pasó todas las validaciones correctamente.
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pagina made by TusPadres</p>
+    </footer>
+
+    <script src="../js/interacciones.js"></script>
+    <script src="../js/validacion.js"></script>
+</body>
+</html>
