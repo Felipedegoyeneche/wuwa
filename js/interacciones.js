@@ -28,3 +28,12 @@ if (btntogglemedia){
 
   }
 }
+
+const btnafinidad = document.getElementById('btn-afinidad');
+if (btnafinidad){
+  btnafinidad.oneclick = function(){
+  const contador = document.getElementById('afinidad');
+  contador.innerText = parseInt(contador.innerText)+1;
+
+  };
+}
