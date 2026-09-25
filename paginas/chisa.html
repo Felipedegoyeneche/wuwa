@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia Chisa</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">WUWA<span>//</span>Guia</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="chisa.html" class="activa">Chisa</a></li>
+            </ul>
+        </nav>  
+        <button id="btn-theme">Modo Oscuro</button>
+    </header>  
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div>
+                <h1>Chisa</h1>
+                <p>
+                    Guía Chisa
+                </p>
+            </div>
+            <div>
+                <img
+                  src="https://static.wikia.nocookie.net/wutheringwaves/images/c/ca/Chisa_Card.jpg/revision/latest?cb=20251017123133"
+                  alt="Chisa"
+                />
+            </div>
+        </section>
+
+        <section id="multimedia">
+            <h2>Chisa</h2>
+            <p style="color:var(--text-dim);">
+                Alternar Multimedia
+            </p>
+            <div class="panel media-panel">
+                <img 
+                  id="media-imagen"
+                  src="https://i.ytimg.com/vi/EqqITg7kaEE/hqdefault.jpg"
+                  alt="Chisa"
+                />
+
+                <video id="media-video" class="media-oculto" controls poster="https://i.ytimg.com/vi/EqqITg7kaEE/hqdefault.jpg">
+                    <source src="https://www.youtube.com/watch?v=EqqITg7kaEE" type="video/mp4" />
+                </video>
+                <button id="btn-toggle-media" class="btn">Ver video</button>
+            </div>
+        </section>
+
+        <section id="datos">
+            <h2>Caracteristicas</h2>
+            <table>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>Elemento</td>
+                    <td>Destruccion</>
+                </tr>
+                <tr>
+                    <td>Arma</td>
+                    <td>Mandoble</td>
+                </tr>
+                <tr>
+                    <td>Rareza</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td>Rol</td>
+                    <td>SubDPS/Sustain</td>
+                </tr>
+            </table>
+
+            <div class="panel" style="margin-top:1.5rem;">
+                <p>Afinadad con Chisa: <strong id="afinidad">0</strong></p>
+                <button id="btn-afinidad" class="btn btn-secundario">Subir Afinidad +1</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pagina made by TusPadres</p>
+    </footer>
+
+    <script src="js/interacciones.js"></script>
+</body>
+</html>
