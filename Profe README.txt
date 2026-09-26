@@ -1,0 +1,1 @@
+Profe cuando vino a preguntar se me olvido decirle que al product owner le dio toc como tenia los espacios del código yo y lo "arreglo", eso
